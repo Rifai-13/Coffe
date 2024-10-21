@@ -13,25 +13,25 @@ document.addEventListener('click', (e) => {
     }
 })
 
-// Tambahkan event listener untuk submit form
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Mencegah form refresh halaman
 
-    // Ambil nilai input dari form
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
     const message = document.getElementById('message').value;
 
-    // Cek apakah semua field telah terisi
+    
     if (name && email && phone && message) {
-        // Tampilkan alert sebagai konfirmasi
+        
         alert('Aduan sedang diproses. Terima kasih atas saran dan kritik Anda!');
         
-        // Reset form setelah pengiriman
+        
         form.reset();
     } else {
-        // Jika field belum terisi semua
+       
         alert('Mohon isi semua field sebelum mengirimkan aduan.');
     }
 });
